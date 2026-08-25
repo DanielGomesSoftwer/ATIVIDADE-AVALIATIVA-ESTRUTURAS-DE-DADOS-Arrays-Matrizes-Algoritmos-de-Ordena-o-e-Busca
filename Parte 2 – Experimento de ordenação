@@ -1,0 +1,2 @@
+lista_bubble = numeros.copy()
+lista_quick = numeros.copy()
