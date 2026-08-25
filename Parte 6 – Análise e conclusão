@@ -1,0 +1,33 @@
+1. O aumento do tamanho da estrutura de dados influencia a quantidade de operações?
+
+Sim. Quanto maior a estrutura de dados, maior tende a ser a quantidade de operações necessárias.
+
+Na busca sequencial, por exemplo, uma matriz de 100 × 100 possui 10.000 posições, enquanto uma matriz de 2 × 2 possui somente 4.
+
+Na ordenação também existe uma diferença muito grande. Ordenar 1.000 elementos exige muito mais trabalho do que ordenar 10 elementos, principalmente utilizando algoritmos como o Bubble Sort.
+
+2. Bubble Sort e Quick Sort crescem da mesma maneira quando o número de elementos aumenta?
+
+Não. Os dois algoritmos possuem comportamentos diferentes.
+
+O Bubble Sort possui complexidade média e de pior caso O(n²), enquanto o Quick Sort possui complexidade média O(n log n).
+
+Por isso, quando o número de elementos aumenta, o Bubble Sort tende a apresentar um crescimento muito maior na quantidade de operações.
+
+O Quick Sort também aumenta sua quantidade de operações, mas geralmente apresenta um crescimento mais eficiente.
+
+3. Por que analisar somente o resultado final da ordenação não é suficiente para comparar algoritmos?
+
+Porque dois algoritmos podem produzir exatamente o mesmo resultado, mas utilizar quantidades diferentes de operações para chegar até ele.
+
+Por exemplo, tanto Bubble Sort quanto Quick Sort podem transformar:
+
+[8, 3, 5, 1]
+
+em:
+
+[1, 3, 5, 8]
+
+O resultado é igual, mas o caminho utilizado por cada algoritmo é diferente.
+
+Por isso, analisar comparações, trocas e movimentações ajuda a entender qual algoritmo é mais eficiente.
