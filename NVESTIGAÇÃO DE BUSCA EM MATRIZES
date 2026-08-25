@@ -1,0 +1,6 @@
+Foi desenvolvida uma busca sequencial utilizando dois loops.
+
+A estrutura utilizada foi:
+
+for i in range(len(matriz)):
+    for j in range(len(matriz[i])):
