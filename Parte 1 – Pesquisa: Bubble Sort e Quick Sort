@@ -1,0 +1,19 @@
+Bubble Sort
+
+O Bubble Sort é um algoritmo de ordenação simples. Ele percorre o array comparando elementos que estão lado a lado. Quando o elemento da esquerda é maior que o elemento da direita, os dois são trocados.
+
+Esse processo continua várias vezes até que os elementos estejam organizados em ordem crescente.
+
+Por exemplo:
+[5, 2, 8, 1]
+
+Compara 5 e 2:
+[2, 5, 8, 1]
+
+Compara 5 e 8:
+[2, 5, 8, 1]
+
+Compara 8 e 1:
+[2, 5, 1, 8]
+
+[1, 2, 5, 8]
