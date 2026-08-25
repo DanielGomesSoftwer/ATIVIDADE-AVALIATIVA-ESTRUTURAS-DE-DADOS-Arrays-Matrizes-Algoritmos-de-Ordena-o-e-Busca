@@ -1,2 +1,32 @@
 lista_bubble = numeros.copy()
 lista_quick = numeros.copy()
+
+Análise
+
+a) Qual algoritmo realizou menos operações para 10 elementos?
+
+Para 10 elementos, a diferença entre os algoritmos pode ser relativamente pequena. Porém, normalmente o Quick Sort tende a realizar menos operações, principalmente em relação às comparações.
+
+b) O comportamento permaneceu igual para 20 elementos?
+
+Com 20 elementos, a diferença começa a ficar mais perceptível. O Bubble Sort aumenta sua quantidade de comparações de forma mais rápida, enquanto o Quick Sort normalmente apresenta um crescimento menor.
+
+c) O que aconteceu quando o tamanho aumentou para 1.000 elementos?
+
+Quando o tamanho aumentou para 1.000 elementos, a diferença entre os algoritmos ficou muito maior. O Bubble Sort passou a realizar uma quantidade muito grande de comparações, enquanto o Quick Sort apresentou um número de operações significativamente menor na maioria das situações.
+
+d) Qual algoritmo apresentou maior crescimento da quantidade de operações?
+
+O Bubble Sort apresentou o maior crescimento, pois sua complexidade é O(n²).
+
+e) Os resultados experimentais são coerentes com as complexidades teóricas estudadas?
+
+Sim. Os resultados tendem a ser coerentes com a teoria. O Bubble Sort apresenta crescimento quadrático, enquanto o Quick Sort apresenta, em média, crescimento O(n log n). Por isso, a diferença aumenta conforme o número de elementos cresce.
+
+f) Em qual situação você escolheria Bubble Sort?
+
+Eu escolheria Bubble Sort para arrays pequenos, atividades simples ou quando o objetivo fosse utilizar um algoritmo fácil de entender e implementar. Para grandes quantidades de dados, não seria minha primeira escolha.
+
+g) Em qual situação você escolheria Quick Sort?
+
+Eu escolheria Quick Sort quando tivesse uma quantidade maior de elementos e precisasse de um algoritmo com melhor desempenho médio.
