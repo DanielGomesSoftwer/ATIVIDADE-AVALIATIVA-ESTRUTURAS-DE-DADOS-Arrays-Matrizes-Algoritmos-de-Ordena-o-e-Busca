@@ -1,0 +1,81 @@
+Foi utilizada uma matriz com 5 linhas e 24 colunas:
+
+sensores = []
+
+A ideia é representar:
+
+5 sensores × 24 horas
+
+Cada linha representa um sensor e cada coluna representa uma hora.
+
+Por exemplo:
+
+              Horas
+         0   1   2   3 ... 23
+
+Sensor 1
+Sensor 2
+Sensor 3
+Sensor 4
+Sensor 5
+
+O programa realiza várias operações sobre essa matriz.
+
+1. Média de cada sensor
+
+Para calcular a média de cada sensor, o programa percorre as 24 posições daquela linha.
+
+Por exemplo:
+
+for i in range(5):
+
+    soma = 0
+
+    for j in range(24):
+        soma = soma + sensores[i][j]
+
+Depois a soma é dividida por 24.
+
+2. Maior temperatura
+
+O programa começa considerando a primeira temperatura como a maior:
+
+maior = sensores[0][0]
+
+Depois percorre todas as posições da matriz e compara os valores.
+
+3. Sensor responsável
+
+Quando encontra uma temperatura maior, o programa guarda também o índice da linha:
+
+sensor_maior = i
+
+Assim é possível descobrir qual sensor registrou a maior temperatura.
+
+4. Horário
+
+Da mesma forma, o índice da coluna é armazenado:
+
+hora_maior = j
+
+Como as colunas representam as horas, esse valor informa o horário em que ocorreu a maior temperatura.
+
+5. Média geral
+
+A matriz possui:
+
+5 × 24 = 120
+
+medições.
+
+Por isso, todas as 120 posições são somadas e o resultado é dividido por 120.
+
+6. Leituras acima do limite
+
+O programa solicita um limite ao usuário.
+
+Por exemplo:
+
+Digite um limite de temperatura: 28
+
+Depois verifica todas as 120 posições e conta aquelas que possuem valor superior ao limite.
