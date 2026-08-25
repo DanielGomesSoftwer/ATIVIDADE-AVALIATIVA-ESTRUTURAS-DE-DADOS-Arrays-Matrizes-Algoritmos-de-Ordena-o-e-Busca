@@ -1,0 +1,51 @@
+Por que são necessários loops aninhados?
+
+São necessários porque estamos trabalhando com uma matriz, que possui duas dimensões.
+
+Um loop é utilizado para percorrer as linhas e outro para percorrer as colunas.
+
+for i in range(5):
+    for j in range(24):
+Qual o papel dos índices [i][j]?
+
+O i representa a linha e o j representa a coluna.
+
+Nesse caso:
+
+[i] = sensor
+
+[j] = horário
+
+Por exemplo:
+
+sensores[2][15]
+
+representa a medição do sensor 3 no horário 15.
+
+Quantas posições da matriz são percorridas?
+
+São:
+
+5 × 24 = 120 posições
+
+Portanto, quando o algoritmo precisa verificar toda a matriz, ele pode realizar até 120 verificações.
+
+Qual a relação entre linhas, colunas e operações?
+
+A quantidade de posições é obtida multiplicando o número de linhas pelo número de colunas:
+
+linhas × colunas
+
+Neste caso:
+
+5 × 24 = 120
+
+Se a matriz tivesse 10 linhas e 50 colunas, seriam:
+
+10 × 50 = 500 posições
+
+Por isso, a quantidade de operações aumenta conforme as dimensões da matriz aumentam.
+
+A complexidade desses percursos é:
+
+O(m × n)
