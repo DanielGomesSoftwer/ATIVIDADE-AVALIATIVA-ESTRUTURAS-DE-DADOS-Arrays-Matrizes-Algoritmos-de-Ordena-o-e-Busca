@@ -1,0 +1,2 @@
+# ATIVIDADE-AVALIATIVA-ESTRUTURAS-DE-DADOS-Arrays-Matrizes-Algoritmos-de-Ordena-o-e-Busca
+Investigar experimentalmente o comportamento de estruturas de dados e algoritmos fundamentais, relacionando arrays, matrizes, ordenação, busca, índices, loops e complexidade computacional.  Nesta atividade, você deverá não apenas desenvolver os códigos, mas também medir, comparar e interpretar a quantidade de operações realizadas pelos algoritmos.
