@@ -1,0 +1,41 @@
+Foi utilizado um array para armazenar 10 temperaturas:
+
+temperaturas = []
+
+O programa recebe os valores do usuário e armazena cada temperatura em uma posição diferente.
+
+Exemplo:
+
+Índice:       0     1     2     3     4
+Temperatura: 21.5  22.0  19.8  25.4  23.1
+
+Depois o programa realiza os seguintes procedimentos:
+
+mostra as temperaturas;
+calcula a média;
+encontra a maior temperatura;
+encontra a menor temperatura;
+identifica o índice do maior;
+identifica o índice do menor;
+conta quantas temperaturas estão acima da média.
+Análise da complexidade
+
+O array possui 10 elementos, mas o algoritmo foi desenvolvido de forma que os percursos sejam proporcionais ao número de elementos.
+
+Assim, considerando n como o tamanho do array, a complexidade é:
+
+O(n)
+
+Isso significa que, conforme o número de temperaturas aumenta, a quantidade de operações também aumenta de maneira aproximadamente proporcional.
+
+Operações de percurso
+
+No programa existem alguns percursos independentes pelo array:
+
+for i in range(10):
+
+Esses percursos passam pelas 10 posições.
+
+Portanto, apesar de existirem vários percursos, eles continuam sendo lineares. Em termos de complexidade, vários percursos O(n) continuam sendo classificados como:
+
+O(n)
