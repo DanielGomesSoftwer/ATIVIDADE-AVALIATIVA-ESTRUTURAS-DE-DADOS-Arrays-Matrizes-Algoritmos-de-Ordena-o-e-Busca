@@ -1,0 +1,33 @@
+## Análise dos Resultados
+
+A partir dos experimentos realizados, foi possível observar que o aumento da quantidade de elementos influencia diretamente o número de operações realizadas pelos algoritmos. Quando o tamanho do array aumenta de 10 para 20 e depois para 1.000 elementos, a quantidade de comparações e movimentações também aumenta.
+
+No experimento de ordenação, o Bubble Sort apresentou um crescimento maior na quantidade de operações. Isso acontece porque sua complexidade é O(n²). Dessa forma, quando o número de elementos aumenta, o número de comparações cresce de forma bastante significativa. Em arrays pequenos, como os de 10 elementos, essa diferença pode não ser tão perceptível. Porém, com 1.000 elementos, o aumento das operações se torna muito maior.
+
+O Quick Sort apresentou um comportamento mais eficiente na maioria dos casos. Sua complexidade média é O(n log n), fazendo com que o crescimento da quantidade de operações seja menor que no Bubble Sort. Isso explica por que ele é mais indicado para trabalhar com conjuntos maiores de dados. Apesar disso, o Quick Sort pode chegar a O(n²) no pior caso, dependendo da forma como o pivô é escolhido.
+
+Outro ponto importante observado foi que os dois algoritmos utilizaram exatamente os mesmos dados de entrada. Isso torna a comparação mais justa, pois a diferença nos resultados está relacionada principalmente ao funcionamento de cada algoritmo, e não aos valores utilizados.
+
+Na busca sequencial em matrizes, os resultados também mostraram uma relação direta entre o tamanho da estrutura e o número de comparações. Na matriz 2 × 2 existem apenas 4 posições. Na matriz 10 × 10 existem 100 posições e na matriz 100 × 100 existem 10.000 posições.
+
+Quando o valor estava localizado no início da matriz, apenas uma comparação foi necessária. Isso acontece porque o algoritmo começa a procurar pela primeira posição. Já quando o valor estava no final, foi necessário percorrer todas as posições anteriores. No caso de um valor inexistente, todas as posições também precisaram ser verificadas.
+
+Portanto, para as matrizes utilizadas, os resultados foram:
+
+| Matriz    | Elementos | Início |  Final | Inexistente |
+| --------- | --------: | -----: | -----: | ----------: |
+| 2 × 2     |         4 |      1 |      4 |           4 |
+| 10 × 10   |       100 |      1 |    100 |         100 |
+| 100 × 100 |    10.000 |      1 | 10.000 |      10.000 |
+
+Esses resultados demonstram o pior caso da busca sequencial. Quando o elemento está na última posição ou não existe, todas as posições precisam ser analisadas. Por isso, a complexidade da busca em uma matriz com m linhas e n colunas é O(m × n).
+
+No Hands On 1, o array armazenou 10 temperaturas. Foram realizados percursos para mostrar os valores, calcular a média, identificar o maior e o menor valor e contar os elementos acima da média. Como os percursos são proporcionais ao tamanho do array, a complexidade é O(n).
+
+No Hands On 2, foram utilizados 5 sensores com 24 medições cada, totalizando 120 posições. Os loops aninhados foram necessários porque a matriz possui duas dimensões. O primeiro índice representa o sensor e o segundo representa o horário.
+
+A análise dos sensores também mostrou que, para percorrer todas as medições, são necessárias 120 verificações. Se o número de sensores ou de horários aumentasse, a quantidade de operações também aumentaria. Por isso, a complexidade dos percursos da matriz pode ser representada por O(m × n).
+
+De forma geral, os experimentos confirmaram que algoritmos diferentes podem produzir o mesmo resultado, mas realizar quantidades diferentes de operações. O Bubble Sort é mais simples, porém apresenta crescimento mais elevado de operações para grandes entradas. O Quick Sort apresenta melhor comportamento médio para grandes arrays. Já a busca sequencial é simples de implementar, mas pode precisar percorrer toda a estrutura quando o elemento está no final ou não está presente.
+
+Assim, os resultados experimentais são coerentes com as complexidades teóricas estudadas. O aumento do tamanho da entrada faz com que as diferenças entre os algoritmos fiquem mais evidentes, mostrando a importância de considerar a eficiência e a complexidade computacional ao escolher uma solução.
