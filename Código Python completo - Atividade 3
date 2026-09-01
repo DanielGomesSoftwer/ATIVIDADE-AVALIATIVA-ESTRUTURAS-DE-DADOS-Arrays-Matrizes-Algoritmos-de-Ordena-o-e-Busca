@@ -1,0 +1,158 @@
+import random
+
+
+# Bubble Sort
+def bubble_sort(vetor):
+    comparacoes = 0
+    trocas = 0
+
+    n = len(vetor)
+
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            comparacoes += 1
+
+            if vetor[j] > vetor[j + 1]:
+                vetor[j], vetor[j + 1] = vetor[j + 1], vetor[j]
+                trocas += 1
+
+    return comparacoes, trocas
+
+
+# Insertion Sort
+def insertion_sort(vetor):
+    comparacoes = 0
+    movimentacoes = 0
+
+    for i in range(1, len(vetor)):
+        chave = vetor[i]
+        j = i - 1
+
+        while j >= 0:
+            comparacoes += 1
+
+            if vetor[j] > chave:
+                vetor[j + 1] = vetor[j]
+                movimentacoes += 1
+                j -= 1
+            else:
+                break
+
+        vetor[j + 1] = chave
+        movimentacoes += 1
+
+    return comparacoes, movimentacoes
+
+
+# Selection Sort
+def selection_sort(vetor):
+    comparacoes = 0
+    trocas = 0
+
+    n = len(vetor)
+
+    for i in range(n - 1):
+        menor = i
+
+        for j in range(i + 1, n):
+            comparacoes += 1
+
+            if vetor[j] < vetor[menor]:
+                menor = j
+
+        if menor != i:
+            vetor[i], vetor[menor] = vetor[menor], vetor[i]
+            trocas += 1
+
+    return comparacoes, trocas
+
+
+# Quick Sort
+def quick_sort(vetor):
+    comparacoes = 0
+    movimentacoes = 0
+
+    def ordenar(inicio, fim):
+        nonlocal comparacoes, movimentacoes
+
+        if inicio < fim:
+            pivo = vetor[fim]
+            i = inicio - 1
+
+            for j in range(inicio, fim):
+                comparacoes += 1
+
+                if vetor[j] <= pivo:
+                    i += 1
+
+                    if i != j:
+                        vetor[i], vetor[j] = vetor[j], vetor[i]
+                        movimentacoes += 1
+
+            if i + 1 != fim:
+                vetor[i + 1], vetor[fim] = vetor[fim], vetor[i + 1]
+                movimentacoes += 1
+
+            posicao_pivo = i + 1
+
+            ordenar(inicio, posicao_pivo - 1)
+            ordenar(posicao_pivo + 1, fim)
+
+    ordenar(0, len(vetor) - 1)
+
+    return comparacoes, movimentacoes
+
+
+# Executando os experimentos
+tamanhos = [10, 20, 1000]
+
+print("RESULTADOS DOS EXPERIMENTOS")
+print("-" * 120)
+
+print(
+    f"{'Tam.':<8}"
+    f"{'Bubble Comp.':<15}"
+    f"{'Bubble Trocas':<15}"
+    f"{'Insertion Comp.':<18}"
+    f"{'Insertion Mov.':<18}"
+    f"{'Selection Comp.':<18}"
+    f"{'Selection Trocas':<18}"
+    f"{'Quick Comp.':<15}"
+    f"{'Quick Mov.':<15}"
+)
+
+print("-" * 120)
+
+
+for tamanho in tamanhos:
+
+    # Gera um único vetor para o experimento
+    original = [random.randint(1, 10000) for _ in range(tamanho)]
+
+    # Cria cópias iguais para cada algoritmo
+    vetor_bubble = original.copy()
+    vetor_insertion = original.copy()
+    vetor_selection = original.copy()
+    vetor_quick = original.copy()
+
+    # Executa os algoritmos
+    bubble_comp, bubble_trocas = bubble_sort(vetor_bubble)
+
+    insertion_comp, insertion_mov = insertion_sort(vetor_insertion)
+
+    selection_comp, selection_trocas = selection_sort(vetor_selection)
+
+    quick_comp, quick_mov = quick_sort(vetor_quick)
+
+    # Mostra os resultados
+    print(
+        f"{tamanho:<8}"
+        f"{bubble_comp:<15}"
+        f"{bubble_trocas:<15}"
+        f"{insertion_comp:<18}"
+        f"{insertion_mov:<18}"
+        f"{selection_comp:<18}"
+        f"{selection_trocas:<18}"
+        f"{quick_comp:<15}"
+        f"{quick_mov:<15}"
+    )
